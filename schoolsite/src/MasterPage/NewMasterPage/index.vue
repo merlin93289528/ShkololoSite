@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <router-link to="/">Головна сторінка</router-link>
+            <router-link to="/">Головна сторінка</router-link>           
             <router-link to="/journal">Журнал</router-link>
             <router-link to="/registration">Реєстрація</router-link>
             <router-link to="/login">Вхід</router-link>
@@ -13,6 +13,7 @@
         </main>
         <footer></footer>
     </div>
+    
 </template>
 
 <script>
@@ -22,15 +23,15 @@
 </script>
 
 <style scoped>
-
-header{
-    width: 100%;
-    height: 7em;
+/* можеш ще попробувати зробити медіа-запроси для дефолтної сторінки , щоб була адаптивность (якщо канешно знаєш)*/
+header{/* тут пиши стилі для хедера (вони будуть відображатися на всіх сторінках) */
+    width: 100%;              
+    height: 7em;                     
     background-color: teal;
 
 }
-footer{
-    width: 100%;
+footer{/* тут пиши стилі для футера (вони будуть відображатися на всіх сторінках) */
+    width: 100%;          
     height: 4em;
     background-color: thistle;
 }
