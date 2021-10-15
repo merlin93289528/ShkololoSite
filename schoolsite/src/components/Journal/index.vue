@@ -1,6 +1,5 @@
 <template>
     <div class="jrnl">
-        <div>Назва предмету {{data.SubjectName}}</div>
         <div>І'мя викладача {{data.TeacherName}}</div>
         <p>Ім'я школяра {{data.StudentName}} , Оцінка {{data.StudentMark}}</p>
     </div>
