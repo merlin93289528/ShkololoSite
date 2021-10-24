@@ -34,19 +34,54 @@
               <a href="https://zno.osvita.ua/" class="link-image-site"></a>
             </div>
             <div class="site3">
+              <a href="https://tinyzonetv.to/" class="link-image-site"></a>
+            </div>
+          </div>
+          <!--  -->
+          <div class="middle2">
+            <div class="site4">
               <a
-                href="https://tinyzonetv.to/"
+                href="https://www.ted.com/"
+                class="link-image-site"
+              ></a>
+            </div>
+            <div class="site5">
+              <a
+                href="https://www.codecademy.com/"
+                class="link-image-site"
+              ></a>
+            </div>
+            <div class="site6">
+              <a
+                href="https://itunesu.itunes.apple.com/coursemanager/"
                 class="link-image-site"
               ></a>
             </div>
           </div>
-
-          <div class="site4">
-            <a
-              href="https://anitube.in.ua/3443-mislivec-h-mislivec-2011.html"
-              class="link-image-site"
-            ></a>
+          <!--  -->
+          <div class="middle3">
+            <div class="site7">
+              <a
+                href="https://www.khanacademy.org/"
+                class="link-image-site"
+              ></a>
+            </div>
+            <!--  -->
+             <div class="site8">
+              <a
+                href="https://www.youtube.com/"
+                class="link-image-site"
+              ></a>
+            </div>
+            <!--  -->
+             <div class="site9">
+              <a
+                href="https://naurok.com.ua/"
+                class="link-image-site"
+              ></a>
+            </div>
           </div>
+          <!--  -->
         </div>
         <div class="right">
           <div class="fRight">

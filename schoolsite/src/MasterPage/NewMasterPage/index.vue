@@ -35,11 +35,10 @@ export default {
   min-height: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 30px 20px;
+  border-radius: 20px 20px;
   background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 0 5px 5px rgba(18, 4, 44, 0.836) inset;
-  background-image: url(https://p4.wallpaperbetter.com/wallpaper/88/701/158/nature-peace-peaceful-landscape-wallpaper-preview.jpg);
+  box-shadow: 0 0 5px 5px rgba(2, 13, 51, 0.836) inset;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/55cfb535e4b061baebe310df/1587472623697-IC8B3J3ZIZI0AMIE7U8G/sky+photo+for+website+home+page.jpeg?format=2500w);
 }
 
 .middleHead {
@@ -53,7 +52,9 @@ export default {
   color: rgb(255, 255, 255);
   padding: 0 20px;
   font-size: 20px;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.521);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.5s;

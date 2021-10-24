@@ -1,15 +1,20 @@
 <template>
     <master-page>
-        сторінка логіну
+        <login-form> 
+            
+        </login-form> 
     </master-page>
 </template>
 
 <script>
 import MasterPage from '@/MasterPage/NewMasterPage'
+import LoginForm from '@/components/LoginForm'
+
     export default {
         name: 'loginPage',
         components:{
-            MasterPage
+            MasterPage,
+            LoginForm
         }
     }
 </script>
