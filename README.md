@@ -1,2 +1,0 @@
-# ShkololoSite
-Site for Shkololo

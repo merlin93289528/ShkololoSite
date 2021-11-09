@@ -11,7 +11,5 @@
 </script>
 
 <style>
-*{
-}
 
 </style>

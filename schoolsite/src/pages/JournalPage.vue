@@ -1,9 +1,6 @@
 <template>
     <master-page>
-        {{marksJournal[0].SubjectName}}
-        <div v-for="markBlock in marksJournal" :key="markBlock.id">
-            <journal :data="markBlock"/>  
-        </div>
+        <journal/>
     </master-page>
 </template>
 

@@ -1,24 +1,47 @@
 <template>
     <div class="jrnl">
-        <div>І'мя викладача {{data.TeacherName}}</div>
-        <p>Ім'я школяра {{data.StudentName}} , Оцінка {{data.StudentMark}}</p>
+        <select v-model="selectedSubject" name="subject">
+            <option disabled value="">Виберіть предмет</option>
+            <option>Математика</option>
+            <option>Українська мова</option>
+            <option>Географія</option>
+        </select>
+        <select v-model="selectedFormClass" name="form-class">
+            <option disabled value="">Виберіть клас</option>
+            <option>1 клас</option>
+            <option>2 клас</option>
+            <option>3 клас</option>
+            <option>4 клас</option>
+        </select>
+        <div>
+            <journal-item v-for="student in getStudentJournal" :data = student :key="student.id"/> 
+        </div>
     </div>
 </template>
 
 <script>
+import JournalItem from '@/components/JournalItem'
+import {mapGetters} from 'vuex'
     export default {
         name: "Journal",
-        props:{
-            data :{
-                type: Object,
-                default: null
+        data() {
+            return {
+                selectedSubject: null,
+                selectedFormClass: null
             }
-        }
+        },
+       
+        components:{
+            JournalItem
+        },
+        computed: {
+            ...mapGetters(['getStudentJournal'])
+        },
     }
 </script>
 
 <style scoped>
 .jrnl{
-    border: solid 2px red;
+    position: relative;
 }
 </style>
