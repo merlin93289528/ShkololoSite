@@ -1,0 +1,138 @@
+.mainPage {
+  overflow:scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background: url(https://pbs.twimg.com/media/EBzi8h1XsAA2eOI.jpg) no-repeat;
+  background-size: cover;
+}
+.wrap {
+  /* position: absolute; */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* margin-left: 1vw; */
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 1vw; */
+}
+.left,
+.middle,
+.right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* top: 10vw; */
+    margin-bottom: 1vw;
+}
+.middle {
+  width: 1000px;
+}
+.fLeft,
+.mLeft,
+.rLeft,
+.fRight,
+.mRight,
+.rRight {
+  /* position: relative; */
+  background-position: center;
+  background-size: cover;
+  width: 22vw;
+  height: 16vw;
+  /* margin-top: 0vw; */
+  margin-left: 0vw;
+  margin-right: 5vw;
+  margin-bottom: 2vw;
+  border-radius: 2vw;
+}
+.fLeft {
+  background-image: url(https://64.media.tumblr.com/028902fd88846bbd63d639375e333358/0258cccda9f5afe1-e4/s500x750/faa4a48ddd259bba01a1cdd9a713fbc20457a17c.gifv);
+}
+.mLeft {
+  background-image: url(https://i.pinimg.com/originals/c4/1e/30/c41e304c90f23e849be92efcfe096b9e.gif);
+}
+.rLeft {
+  background-image: url(https://c.tenor.com/0pjVjrGpwUYAAAAC/hisoka-hunter-x-hunter.gif);
+}
+.link-image,
+.link-image-site {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.fRight {
+  background-image: url(https://i.gifer.com/3ycK.gif);
+}
+.mRight {
+  background-image: url(https://uprostim.com/wp-content/uploads/2021/03/image077-6.gif);
+}
+.rRight {
+  background-image: url(https://pa1.narvii.com/6470/a7b2f698a713baacdd8918602202af2195fe9eaf_hq.gif);
+}
+.middle {
+  /* top: 45px; */
+  color: rgb(255, 255, 255);
+  /* font-size: 30px; */
+  /* text-shadow: 3px 3px rgba(0, 0, 0, 0.521); */
+  display: flex;
+  flex-direction: column;
+}
+.site1,
+.site2,
+.site3,
+.site4,
+.site5,
+.site6,
+.site7,
+.site8,
+.site9{
+  /* position: relative; */
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  width: 20vw;
+  height: 16vw;
+  /* margin-top: 2vw; */
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 2vw;
+  border-radius: 50px;
+}
+
+.middle1,.middle2,.middle3 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.site1 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/1200px-Wikipedia-logo-v2-en.svg.png);
+}
+.site2 {
+  background-image: url(https://zno.osvita.ua/doc/i/zno_200x200.png);
+}
+.site3 {
+  background-image: url(https://i2.wp.com/apkoll.com/wp-content/uploads/2020/04/Tinyzone.tv-Apk.png?fit=250%2C250&ssl=1);
+}
+.site4 {
+  background-image: url(https://eksmo.ru/upload/iblock/c0c/ted_big.jpg);
+}
+.site5 {
+  background-image: url(https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_1725430e3495c1895d99949f4c384b25/codecademy.png);
+}
+.site6 {
+  background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/92/ce/d9/92ced964-a2dd-688e-4e01-a4390b1e5df6/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png);
+}
+.site7 {
+  background-image: url(https://yt3.ggpht.com/ytc/AKedOLSE_4l_jvl8jDc-qPS9LSXDbzOiQpruCwKgsN9T=s900-c-k-c0x00ffffff-no-rj);
+}
+.site8 {
+  background-image: url(https://www.youtube.com/img/desktop/yt_1200.png);
+}
+.site9 {
+  background-image: url(https://i.pinimg.com/originals/b5/f9/a0/b5f9a0665992ebbaaefa0daee3f1476e.jpg);
+}
