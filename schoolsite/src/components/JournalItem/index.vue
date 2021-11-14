@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="JrnItem">
+<<<<<<< HEAD
       <p class="studName">{{ data.studentName }}</p>
       <div class="inputTypeMark">
         <input type="text" />
@@ -12,18 +13,29 @@
         <input type="text" />
         <input type="text" />
         <input type="text" />
+=======
+      <div>
+        <p>{{data.studentName}}
+        <input type="text" class="markField">
+        </p>
+        
+>>>>>>> cf08cfbff208fffe7ec323a9ae351b4e24207669
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   props: {
     data: {
       type: Object,
       default: () => ({}),
     },
+  },
+  computed: {
+
   },
 };
 </script>

@@ -1,26 +1,23 @@
-import HomePage from '@/pages/HomePage.vue';
-import LoginPage from '@/pages/LoginPage.vue';
-import RegistrationPage from '@/pages/RegistrationPage.vue';
-import JournalPage from '@/pages/JournalPage.vue';
+
 import {createRouter, createWebHashHistory} from 'vue-router';
 
 
 const routes = [
     {
         path : '/',
-        component: HomePage
+        component: () => import('@/pages/HomePage')
     },
     {
         path : '/login',
-        component: LoginPage
+        component: () => import('@/pages/LoginPage')
     },
     {
         path : '/registration',
-        component: RegistrationPage
+        component: () => import('@/pages/RegistrationPage')
     },
     {
         path : '/journal',
-        component:JournalPage
+        component: () => import('@/pages/JournalPage')
     }
 ]
 const router = createRouter({
