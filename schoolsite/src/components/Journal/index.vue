@@ -19,7 +19,7 @@
 
       <div>
         <journal-item
-          v-for="student in getStudentJournal"
+          v-for="student in filtredJournal"
           :data="student"
           :key="student.id"
         />
@@ -45,8 +45,16 @@ export default {
   },
   computed: {
     ...mapGetters(["getStudentJournal"]),
+
+    filtredJournal() {
+      return this.getStudentJournal.filter(
+        (el) =>
+          el.studentClass == parseInt(this.selectedFormClass) &&
+          el.subject == this.selectedSubject
+      );
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

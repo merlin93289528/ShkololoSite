@@ -3,16 +3,6 @@
     <div class="JrnItem">
       <div>
         <p>{{data.studentName}}
-        
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
-        <input type="text" class="markField">
         <input type="text" class="markField">
         </p>
         
@@ -22,12 +12,16 @@
 </template>
 
 <script>
+
 export default {
   props: {
     data: {
       type: Object,
       default: () => ({}),
     },
+  },
+  computed: {
+
   },
 };
 </script>

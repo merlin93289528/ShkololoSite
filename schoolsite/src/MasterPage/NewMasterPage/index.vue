@@ -6,9 +6,7 @@
           <div class="alLeft">
             <router-link class="head1" to="/">Головна сторінка</router-link>
             <router-link class="head2" to="/journal">Журнал</router-link>
-            <router-link class="head3" to="/registration"
-              >Реєстрація</router-link
-            >
+            <router-link class="head3" to="/registration">Реєстрація</router-link>
           </div>
           <div class="alRight">
             <router-link class="head4" to="/login">Вхід</router-link>
@@ -36,7 +34,7 @@ export default {
 
 <style scoped>
 header {
-  height: 4vw; 
+  height: 4vw;
   margin-left: 1vw;
   margin-right: 1vw;
 }
@@ -63,7 +61,7 @@ header {
   justify-content: left;
   margin-left: 2vw;
 }
-.alRight{
+.alRight {
   margin-left: 62vw;
 }
 .head1,
