@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper1">
     <div class="jrnl">
       <div class="jrnlCriteria">
         <select class="sel" v-model="selectedSubject" name="subject">

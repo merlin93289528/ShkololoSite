@@ -1,5 +1,4 @@
 .mainPage {
-  /* overflow:scroll; */
   position: fixed;
   top: 0;
   left: 0;
@@ -9,15 +8,10 @@
   background-size: cover;
 }
 .wrap {
-  /* position: absolute; */
-  
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  /* margin-left: 1vw; */
-  /* width: 100%;
-  height: 100%; */
-  margin-top: 0vw;
+  margin-top: 2vw;
 }
 .left,
 .middle,
@@ -25,11 +19,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* top: 10vw; */
   margin-left: 1vw;
   margin-right: 1vw;
   margin-bottom: 1vw;
-
 }
 .middle {
   width: 50vw;
@@ -45,14 +37,12 @@
   background-size: cover;
   width: 22vw;
   height: 14vw;
-  /* margin-top: 0vw; */
   margin-left: 0vw;
-  /* margin-right: 5vw; */
   margin-bottom: 2vw;
   border-radius: 1vw;
 }
 .fLeft {
-  background-image: url(https://64.media.tumblr.com/028902fd88846bbd63d639375e333358/0258cccda9f5afe1-e4/s500x750/faa4a48ddd259bba01a1cdd9a713fbc20457a17c.gifv);
+  background-image: url(https://i.pinimg.com/originals/0c/da/4d/0cda4d5997be70513c39eb25e58748fc.gif);
 }
 .mLeft {
   background-image: url(https://i.pinimg.com/originals/c4/1e/30/c41e304c90f23e849be92efcfe096b9e.gif);
@@ -77,10 +67,7 @@
   background-image: url(https://pa1.narvii.com/6470/a7b2f698a713baacdd8918602202af2195fe9eaf_hq.gif);
 }
 .middle {
-  /* top: 45px; */
-  color: rgb(255, 255, 255);
-  /* font-size: 30px; */
-  /* text-shadow: 3px 3px rgba(0, 0, 0, 0.521); */
+  color: rgb(32, 32, 32);
   display: flex;
   flex-direction: column;
 }
@@ -92,22 +79,22 @@
 .site6,
 .site7,
 .site8,
-.site9{
+.site9 {
   position: relative;
   background-position: center;
   background-size: cover;
   top: 0;
   width: 20vw;
   height: 14vw;
-  /* margin-top: 2vw; */
-
   margin-left: 1vw;
   margin-right: 1vw;
   margin-bottom: 2vw;
   border-radius: 0.5vw;
 }
 
-.middle1,.middle2,.middle3 {
+.middle1,
+.middle2,
+.middle3 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;

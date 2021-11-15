@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <div class="container">
+      <div class="container1">
         <div class="middleHead">
           <div class="alLeft">
             <router-link class="head1" to="/">Головна сторінка</router-link>
@@ -35,21 +35,22 @@ export default {
 
 <style scoped>
 header {
-  height: 4vw;
+  height: 1.5vw;
   margin-left: 1vw;
   margin-right: 1vw;
 }
-.container {
+.container1 {
   position: relative;
   display: flex;
   align-items: center;
   z-index: 1;
-  min-height: 40px;
+  height: 2vw;
+  margin-top: 0.2vw;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 0.5vw 0.5vw;
   background-repeat: no-repeat;
-  box-shadow: 0 0 25px 20px rgba(2, 13, 51, 0.603) inset;
+  box-shadow: 0 0 17px 10px rgba(0, 0, 0, 0.404) inset;
 }
 
 .middleHead {
@@ -85,7 +86,7 @@ header {
 .head2:hover,
 .head3:hover,
 .head4:hover {
-  font-size: 25px;
+  font-size: 30px;
   z-index: 1;
 }
 </style>
