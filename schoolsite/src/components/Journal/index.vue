@@ -2,14 +2,14 @@
   <div class="wrapper">
     <div class="jrnl">
       <div class="jrnlCriteria">
-        <select v-model="selectedSubject" name="subject">
-          <option disabled value="">Виберіть предмет</option>
+        <select class="sel" v-model="selectedSubject" name="subject">
+          <option class="selOptionDis" disabled value="">Виберіть предмет</option>
           <option>Математика</option>
           <option>Українська мова</option>
           <option>Географія</option>
         </select>
-        <select v-model="selectedFormClass" name="form-class">
-          <option disabled value="">Виберіть клас</option>
+        <select class="sel" v-model="selectedFormClass" name="form-class">
+          <option class="selOptionDis" disabled value="">Виберіть клас</option>
           <option>1 клас</option>
           <option>2 клас</option>
           <option>3 клас</option>
@@ -17,7 +17,7 @@
         </select>
       </div>
 
-      <div>
+      <div class="jrnlStudentName">
         <journal-item
           v-for="student in filtredJournal"
           :data="student"

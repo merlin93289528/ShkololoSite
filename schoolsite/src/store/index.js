@@ -14,7 +14,8 @@ const store = new createStore({
             {
                 id: 2,
                 studentName: 'Савчин Мирослав Володимирович',
-                studentClass: 3,
+                studentClass: 4,
+                subject: 'Математика',
 
             },
             {
@@ -28,6 +29,146 @@ const store = new createStore({
             {
                 id: 5,
                 studentName: 'Мілюченко Андрій Андрійович'
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
+            },
+            {
+                id: 1,
+                studentName: 'Мілюченко Андрій Андрійович',
+                studentClass: 4,
+                subject: 'Математика',
+
             },
         ],
     },
