@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <!--  -->
       <div class="form-group">
         <label for="name"> Ваше ім'я, прізвище та по-батькові:</label>
         <div>
@@ -31,7 +30,9 @@
       </div>
       <div class="form-group">
       <button type="button" class="btn">Вхід</button>
-      <button type="button" class="btn">Зареєструватися</button>
+      </div>
+      <div>
+        <p>Нема аккаунту?   <router-link to="/registration">Зареєструватися</router-link></p>
       </div>
     </div>
   </div>

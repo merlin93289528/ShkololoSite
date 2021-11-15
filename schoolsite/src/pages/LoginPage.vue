@@ -1,7 +1,6 @@
 <template>
     <master-page>
-        <login-form> 
-            
+        <login-form>      
         </login-form> 
     </master-page>
 </template>

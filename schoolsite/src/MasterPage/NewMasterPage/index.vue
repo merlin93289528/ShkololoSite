@@ -6,10 +6,12 @@
           <div class="alLeft">
             <router-link class="head1" to="/">Головна сторінка</router-link>
             <router-link class="head2" to="/journal">Журнал</router-link>
-            <router-link class="head3" to="/registration">Реєстрація</router-link>
           </div>
-          <div class="alRight">
+          <div class="alRight" v-if="!getAuthStatus">
             <router-link class="head4" to="/login">Вхід</router-link>
+          </div>
+          <div class="alRight" v-else>
+              Ви зареєстровані
           </div>
         </div>
       </div>
@@ -22,12 +24,11 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   name: "masterPage",
-  data() {
-    return {
-      stan: false,
-    };
+  computed: {
+    ...mapGetters(['getAuthStatus'])
   },
 };
 </script>
