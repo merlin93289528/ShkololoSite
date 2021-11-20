@@ -6,6 +6,8 @@
           <div class="alLeft">
             <router-link class="head1" to="/">Головна сторінка</router-link>
             <router-link class="head2" to="/journal">Журнал</router-link>
+            <!-- <router-link class="head2" to="/admin">Адмін</router-link> -->
+
           </div>
           <div class="alRight" v-if="!getAuthStatus">
             <router-link class="head4" to="/login">Вхід</router-link>
