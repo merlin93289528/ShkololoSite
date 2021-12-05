@@ -19,9 +19,10 @@
 
       <div class="jrnlStudentName">
         <journal-item
-          v-for="student in filtredJournal"
+          v-for="student in newStudents"
           :data="student"
           :key="student.id"
+          :selectedsubj="selectedSubject"
         />
       </div>
     </div>
@@ -30,7 +31,7 @@
 
 <script>
 import JournalItem from "@/components/JournalItem";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Journal",
   data() {
@@ -43,16 +44,20 @@ export default {
   components: {
     JournalItem,
   },
+  methods: {
+  ...mapActions(['GET_STUDENTS_FROM_API'])
+  },
   computed: {
     ...mapGetters(["getStudentJournal"]),
-
-    filtredJournal() {
-      return this.getStudentJournal.filter(
-        (el) =>
-          el.studentClass == parseInt(this.selectedFormClass) &&
-          el.subject == this.selectedSubject
-      );
-    },
+    newStudents(){
+     return this.getStudentJournal.filter(
+       (el) => JSON.parse(el.studentform) == parseInt(this.selectedFormClass)
+     ) 
+    }
+  
+  },
+  created () {
+    this.GET_STUDENTS_FROM_API();
   },
 };
 </script>

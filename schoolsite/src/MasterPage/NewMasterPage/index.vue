@@ -12,6 +12,9 @@
           </div>
           <div class="alRight" v-else>
               Ви зареєстровані
+              <div>
+                <button @click="logout">Вийти</button>
+              </div>
           </div>
         </div>
       </div>
@@ -29,6 +32,12 @@ export default {
   name: "masterPage",
   computed: {
     ...mapGetters(['getAuthStatus'])
+  },
+  methods: {
+    logout() {
+      localStorage.clear();
+      window.location.reload()
+    }
   },
 };
 </script>
