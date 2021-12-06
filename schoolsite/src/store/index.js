@@ -4,12 +4,13 @@ import axios from 'axios';
 const store = new createStore({
     state: {
         studentJournal: [],
-        authStatus: localStorage.getItem("isAuth") ?? false,
-        userRole: JSON.parse(localStorage.getItem("Roles"))
+        authStatus: JSON.parse(localStorage.getItem("isAuth")) ?? false,
+        userRole: localStorage.getItem("Roles").split(" ") ?? null
     },
     getters: {
         getStudentJournal: (state) => state.studentJournal,
-        getAuthStatus: ({ authStatus }) => authStatus
+        getAuthStatus: ({ authStatus }) => authStatus,
+        getUserRole: ({userRole}) => userRole[0]
     },
     actions: {
         GET_STUDENTS_FROM_API({ commit }) {
@@ -26,31 +27,23 @@ const store = new createStore({
         GET_NEW_MARKS({ commit }, data) {
             commit('SET_NEW_MARKS', data)
         },
-        GET_USER_ROLE({ commit }) {
-            return axios('http://localhost:5000/auth/getroles', {
-                method: 'GET'
-            }).then((response) => {
-                commit('SET_ROLES_TO_VUEX', response.data)
-            })
-        }
+       
     },
     mutations: {
         SET_STUDENTS_TO_VUEX(state, students) {
             state.studentJournal = students
         },
-        SET_AUTH_STATUS(state, token) {
-            localStorage.setItem('JWTtoken', token)
+        SET_AUTH_STATUS(state, data) {
+            localStorage.setItem('JWTtoken', data.token)
             state.authStatus = true
+            state.userRole = data.roles
+            localStorage.setItem('Roles', [data.roles , "USER"])
             localStorage.setItem('isAuth', true)
         },
         SET_NEW_MARKS(state, data) {
             const index = state.studentJournal.findIndex(student => student._id === data._id)
             state.studentJournal[index] = data
         },
-        SET_ROLES_TO_VUEX(state, roles) {
-            state.userRole = roles
-            localStorage.setItem('Roles', roles)
-        }
     }
 
 

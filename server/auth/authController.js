@@ -27,7 +27,7 @@ class authController {
                 return res.status(400).json({ message: 'Користувач з таким іменем уже існує' })
             }
             const hashPassword = bcrypt.hashSync(password, 7);
-            const userRole = await Role.findOne({ value: "ADMIN" })
+            const userRole = await Role.findOne({ value: "USER" })
             const user = new User({ username, password: hashPassword, roles: [userRole.value] })
             await user.save()
             return res.json({ message: 'Користувач був створений' })
@@ -49,7 +49,8 @@ class authController {
                 return res.status(400).json({message: 'Введено не правельний пароль'})
             }
             const token = generateAccessToken(user._id , user.roles)
-            return res.json({token})
+            const roles = user.roles
+            return res.json({token , roles})
         } 
         catch (e) {
             console.log(e)

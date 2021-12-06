@@ -49,7 +49,7 @@ export default {
           password: this.password,
         })
         .then((response) => {
-          this.IS_AUTH(response.data.token);
+          this.IS_AUTH(response.data);
           router.push("/");
         });
     },
