@@ -72,8 +72,10 @@ export default {
   height: 1.3vw;
   font-size: 1vw;
   text-align: center;
-  color: aliceblue;
-  background-color: rgba(20, 19, 90, 0.541);
+   color: rgb(24, 10, 10);
+
+  background-color: rgba(255, 228, 196, 0.651);
+
 }
 .inputTypeMark {
   margin-left: 1vw;

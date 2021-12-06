@@ -1,9 +1,20 @@
 <template>
   <div class="wrapper1">
+    <div class="butt_popup">
+      <button @click="showPopup" class="btnRegistAdmin">
+        Зареєструвати користувача
+      </button>
+    </div>
+    <div class="pop-window">
+    <regist-popup v-if="popupVisible" @closePop="closePopAdm" />
+
+    </div>
     <div class="jrnl">
       <div class="jrnlCriteria">
         <select class="sel" v-model="selectedSubject" name="subject">
-          <option class="selOptionDis" disabled value="">Виберіть предмет</option>
+          <option class="selOptionDis" disabled value=""
+            >Виберіть предмет</option
+          >
           <option>Математика</option>
           <option>Українська мова</option>
           <option>Географія</option>
@@ -30,6 +41,8 @@
 </template>
 
 <script>
+import registPopup from "../popupWindow/registPopup";
+
 import JournalItem from "@/components/JournalItem";
 import { mapGetters, mapActions } from "vuex";
 export default {
@@ -38,25 +51,32 @@ export default {
     return {
       selectedSubject: null,
       selectedFormClass: null,
-    };
-  },
+      popupVisible: false,
 
+    }
+  },
   components: {
     JournalItem,
+    registPopup,
   },
   methods: {
-  ...mapActions(['GET_STUDENTS_FROM_API'])
+    ...mapActions(["GET_STUDENTS_FROM_API"]),
+    closePopAdm() {
+      this.popupVisible = false;
+    },
+    showPopup() {
+      this.popupVisible = true;
+    },
   },
   computed: {
     ...mapGetters(["getStudentJournal"]),
-    newStudents(){
-     return this.getStudentJournal.filter(
-       (el) => JSON.parse(el.studentform) == parseInt(this.selectedFormClass)
-     ) 
-    }
-  
+    newStudents() {
+      return this.getStudentJournal.filter(
+        (el) => JSON.parse(el.studentform) == parseInt(this.selectedFormClass)
+      );
+    },
   },
-  created () {
+  created() {
     this.GET_STUDENTS_FROM_API();
   },
 };

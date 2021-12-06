@@ -1,4 +1,9 @@
-.container {
+.register-container {
+  .btn {
+    background-color: rgba(66, 54, 133, 0.315);
+    color: white;
+  }
+  .container {
     overflow: auto;
     position: fixed;
     top: 0;
@@ -30,11 +35,14 @@
     color: rgb(255, 255, 255);
   }
   .form-group {
-  margin-left: 1vw;
-  margin-bottom: 1.5vw;
+    margin-left: 1vw;
+    margin-bottom: 1.5vw;
     top: 1.5vw;
     font-size: 30px;
     text-shadow: 3px 3px rgba(0, 0, 0, 0.521);
+  }
+  form {
+    margin-top: 3vw;
   }
   .inpType {
     margin-top: 5px;
@@ -43,19 +51,14 @@
     font-size: 20px;
     border-radius: 10px;
   }
-  .btn{
+  .btn {
     border-radius: 10px;
     width: auto;
     height: auto;
     font-size: 30px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.521);
   }
-  .refRegister{
+  .refRegister {
     color: aliceblue;
   }
-  .register-container{
-    .btn{
-      background-color: rgba(66, 54, 133, 0.315);
-      color: white;
-    }
-  }
+}

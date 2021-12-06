@@ -1,70 +1,70 @@
-.adminWrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(https://i.pinimg.com/originals/04/ff/19/04ff1913cf0aa579b81a272d481508f9.jpg);
-}
-.buttonAdmin {
-  display: flex;
-  justify-content: center;
-  margin-top: 7vw;
-}
-.btnRegistAdmin {
-  background-color: rgba(40, 20, 95, 0.411);
-  color: white;
-  width: 10vw;
-}
-.popup {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  margin-top: 2vw;
-  margin-left: 34vw;
-  background-color: aquamarine;
-  width: 31.25vw;
-  height: 25.25vw;
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.521);
-  background-repeat: no-repeat;
-  background-image: url(https://cdn.wallpapersafari.com/12/93/Ei0zCM.jpg);
-}
-.studInfo {
-  margin-top: 2vw;
-  margin-left: 2vw;
-  font-size: 30px;
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.521);
-  width: 100%;
-}
-.inpInfo {
-  margin-top: 1vw;
-  height: 1, 5vw;
-  width: 20vw;
-  font-size: 20px;
-  border-radius: 10px;
-}
-.btnCloseDiv {
-  width: 75%;
-}
-.buttons {
-  display: flex;
-  flex-direction: row;
-  margin-left: 2vw;
-  margin-top: 7vw;
-}
-.btnClose {
-  width: 2vw;
-  height: 2vw;
-  color: white;
-  background-color: rgba(15, 6, 39, 0.555);
-}
-.btnAdd {
-  height: 2vw;
-  color: white;
+// .adminWrapper {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-image: url(https://i.pinimg.com/originals/04/ff/19/04ff1913cf0aa579b81a272d481508f9.jpg);
+// }
+// .buttonAdmin {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 7vw;
+// }
+// .btnRegistAdmin {
+//   background-color: rgba(40, 20, 95, 0.411);
+//   color: white;
+//   width: 10vw;
+// }
+// .popup {
+//   color: white;
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 2vw;
+//   margin-left: 34vw;
+//   background-color: aquamarine;
+//   width: 31.25vw;
+//   height: 25.25vw;
+//   background-size: cover;
+//   border-radius: 20px;
+//   box-shadow: 5px 5px rgba(0, 0, 0, 0.521);
+//   background-repeat: no-repeat;
+//   background-image: url(https://cdn.wallpapersafari.com/12/93/Ei0zCM.jpg);
+// }
+// .studInfo {
+//   margin-top: 2vw;
+//   margin-left: 2vw;
+//   font-size: 30px;
+//   text-shadow: 3px 3px rgba(0, 0, 0, 0.521);
+//   width: 100%;
+// }
+// .inpInfo {
+//   margin-top: 1vw;
+//   height: 1, 5vw;
+//   width: 20vw;
+//   font-size: 20px;
+//   border-radius: 10px;
+// }
+// .btnCloseDiv {
+//   width: 75%;
+// }
+// .buttons {
+//   display: flex;
+//   flex-direction: row;
+//   margin-left: 2vw;
+//   margin-top: 7vw;
+// }
+// .btnClose {
+//   width: 2vw;
+//   height: 2vw;
+//   color: white;
+//   background-color: rgba(15, 6, 39, 0.555);
+// }
+// .btnAdd {
+//   height: 2vw;
+//   color: white;
 
-  background-color: rgba(15, 6, 39, 0.555);
-}
+//   background-color: rgba(15, 6, 39, 0.555);
+// }

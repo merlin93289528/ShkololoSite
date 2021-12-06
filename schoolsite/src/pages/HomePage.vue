@@ -118,4 +118,4 @@ export default {
 };
 </script>
 
-<style scoped src="@/assets/styles/mainPage.css"></style>
+<style scoped ></style>

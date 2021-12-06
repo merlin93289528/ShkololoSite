@@ -11,11 +11,13 @@
 }
 .jrnl {
   margin-top: 5vw;
+
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 1.5vw;
+  z-index: 0;
 }
 .jrnlCriteria {
   display: flex;
@@ -24,15 +26,103 @@
 }
 .sel {
   width: 7vw;
-  color: rgb(255, 255, 255);
+  color: rgb(24, 10, 10);
   border-radius: 0.3vw 0.3vw;
+  background-color: rgba(255, 228, 196, 0.651);
 
-  background-color: rgba(20, 19, 90, 0.541);
 }
 .selOptionDis {
-  color: aliceblue;
+  color: rgb(24, 10, 10);
 }
-.jrnlStudentName{
+.jrnlStudentName {
   width: 100%;
-}
+  margin-top: 2vw;
+  margin-left: 18vw;
 
+}
+.butt_popup {
+  position: absolute;
+  left: 5vw;
+  top: 5vw;
+  z-index: 1;
+}
+.btnRegistAdmin{
+  background-color: rgba(255, 228, 196, 0.651);
+  border-radius: 0.3vw 0.3vw;
+  height: 1.5vw;
+
+}
+.pop-window {
+  position: absolute;
+  z-index: 1;
+  top: 15vw;
+}
+.popup {
+  color: rgb(24, 11, 11);
+  display: flex;
+  flex-direction: column;
+  width: 31.25vw;
+  height: 25.25vw;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.521);
+  background-repeat: no-repeat;
+  background-image: url(https://p.favim.com/orig/2018/11/04/aesthetic-sunshine-sea-Favim.com-6523089.jpg);
+}
+.studInfo {
+  font-weight: bolder;
+  margin-top: 1vw;
+  margin-left: 11vw;
+  font-size: 25px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.596);
+  width: 100%;
+  label {
+    margin-left: 2.7vw;
+  }
+  input {
+    background-color: rgba(255, 228, 196, 0.651);
+
+    border-radius: 0.3vw 0.3vw;
+  }
+}
+.subjects {
+  margin-top: 2vw;
+  margin-left: 9vw;
+  font-weight: bolder;
+  font-size: 20px;
+
+  input {
+    width: 13vw;
+    border-radius: 0.3vw 0.3vw;
+    background-color: rgba(255, 228, 196, 0.651);
+
+  }
+  label {
+    margin-left: 4vw;
+  }
+}
+.subjInfo {
+  margin-bottom: 1vw;
+}
+.buttons {
+  margin-left: 2.5vw;
+  flex-direction: row;
+  display: flex;
+}
+.btnAddDiv {
+  margin-left: 18vw;
+}
+.btnClose {
+  background-color: rgba(255, 228, 196, 0.651);
+
+  height: 2vw;
+  border-radius: 0.3vw 0.3vw;
+  width: 4vw;
+}
+.btnAdd {
+  height: 2vw;
+  background-color: rgba(255, 228, 196, 0.651);
+
+  border-radius: 0.3vw 0.3vw;
+  width: 4vw;
+}

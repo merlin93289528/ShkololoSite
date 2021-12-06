@@ -2,7 +2,7 @@
   <div class="popup">
     <div class="popupWrapAdmin">
       <div class="studInfo">
-        <label for="name"> Ім'я, прізвище та по-батькові:</label>
+        <label for="name"> Логін:</label>
         <div class="">
           <input type="text" id="name" class="inpInfo" />
         </div>
@@ -12,6 +12,26 @@
         <div class="">
           <input type="text" id="formClass" class="inpInfo" />
         </div>
+      </div>
+      <div class="subjects">
+        <div class="subjInfo">
+        <label for="math"> Математика:</label>
+        <div class="">
+          <input type="text" id="math" class="inpInfo" />
+        </div>
+      </div>
+      <div class="subjInfo">
+        <label for="ukr"> Українська:</label>
+        <div class="">
+          <input type="text" id="ukr" class="inpInfo" />
+        </div>
+      </div>
+      <div class="subjInfo">
+        <label for="geogr"> Географія:</label>
+        <div class="">
+          <input type="text" id="geogr" class="inpInfo" />
+        </div>
+      </div>
       </div>
     </div>
     <div class="buttons">
@@ -27,17 +47,12 @@
 
 <script>
 export default {
-  name: "popup",
-  props: {},
-  data() {
-    return {};
-  },
+  
   methods: {
     closePop() {
       this.$emit("closePop");
     },
   },
-  computed: {},
 };
 </script>
 
