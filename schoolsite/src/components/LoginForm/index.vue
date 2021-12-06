@@ -18,8 +18,8 @@
       </div>
       <div class="form-group">
         Нема аккаунту?
-        <router-link class="refRegister" to="/registration"
-          >Зареєструватися</router-link
+        <router-link class="refAdmin" to="/admin"
+          >Зареєструвати</router-link
         >
       </div>
     </div>

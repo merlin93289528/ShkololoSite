@@ -18,6 +18,10 @@ const routes = [
     {
         path : '/journal',
         component: () => import('@/pages/JournalPage')
+    },
+    {
+        path : '/admin',
+        component: () => import('@/pages/AdminPage')
     }
 ]
 const router = createRouter({
