@@ -3,33 +3,24 @@
     <div class="wrapper">
       <form>
         <div class="form-group">
-          <label for="name"> Ваше ім'я, прізвище та по-батькові:</label>
+          <label for="name"> Логін:</label>
           <div>
             <input type="text" id="name" class="inpType" v-model="name" />
           </div>
         </div>
-
         <div class="form-group">
-          <label for="schoolClass"> Клас: </label>
+          <label for="password"> Пароль:</label>
           <div>
             <input
               type="text"
-              id="schoolClass"
+              id="password"
               class="inpType"
-              v-model="formClass"
+              v-model="password"
             />
           </div>
         </div>
-
         <div class="form-group">
-          <label for="email"> Email:</label>
-          <div class="">
-            <input type="text" id="email" class="inpType" v-model="email" />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="password"> Пароль:</label>
+          <label for="password"> Повторіть ваш пароль:</label>
           <div>
             <input
               type="text"
@@ -63,4 +54,4 @@ export default {
 };
 </script>
 
-<style scoped ></style>
+<style scoped></style>

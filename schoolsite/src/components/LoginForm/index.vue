@@ -2,7 +2,7 @@
   <div class="container">
     <div class="wrapper">
       <div class="form-group">
-        <label for="email"> username:</label>
+        <label for="email"> Логін:</label>
         <div class="">
           <input type="text" id="email" class="inpType" v-model="username" />
         </div>
@@ -18,7 +18,7 @@
       </div>
       <div class="form-group">
         Нема аккаунту?
-        <router-link class="refAdmin" to="/admin"
+        <router-link class="refRegist" to="/registration"
           >Зареєструвати</router-link
         >
       </div>
