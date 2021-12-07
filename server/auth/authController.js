@@ -3,14 +3,14 @@ const Role = require('../models/Role')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 const { validationResult } = require('express-validator')
-const {secret} = require('../config')
+const { secret } = require('../config')
 
-const generateAccessToken = (id , roles)=>{
+const generateAccessToken = (id, roles) => {
     const payload = {
         id,
         roles
     }
-    return jwt.sign(payload , secret ,{expiresIn: "24h"} )
+    return jwt.sign(payload, secret, { expiresIn: "24h" })
 }
 
 
@@ -21,10 +21,13 @@ class authController {
             if (!errors.isEmpty()) {
                 return res.status(400).json({ message: "Помилка при реєстрації", errors })
             }
-            const { username, password } = req.body
+            const { username, password, repeat_password } = req.body
             const candidate = await User.findOne({ username })
             if (candidate) {
                 return res.status(400).json({ message: 'Користувач з таким іменем уже існує' })
+            }
+            else if (password != repeat_password) {
+                return res.status(400).json({ message: 'Паролі не співпадають' })
             }
             const hashPassword = bcrypt.hashSync(password, 7);
             const userRole = await Role.findOne({ value: "USER" })
@@ -39,19 +42,19 @@ class authController {
     }
     async login(req, res) {
         try {
-            const {username , password} = req.body
-            const user = await User.findOne({username})
-            if(!user){
-                return res.status(400).json({message: 'Користувач з таким іменем не зареєстрований'})
+            const { username, password } = req.body
+            const user = await User.findOne({ username })
+            if (!user) {
+                return res.status(400).json({ message: 'Користувач з таким іменем не зареєстрований' })
             }
-            const validPassword = bcrypt.compareSync(password , user.password)
-            if(!validPassword){
-                return res.status(400).json({message: 'Введено не правельний пароль'})
+            const validPassword = bcrypt.compareSync(password, user.password)
+            if (!validPassword) {
+                return res.status(400).json({ message: 'Введено не правельний пароль' })
             }
-            const token = generateAccessToken(user._id , user.roles)
+            const token = generateAccessToken(user._id, user.roles)
             const roles = user.roles
-            return res.json({token , roles})
-        } 
+            return res.json({ token, roles })
+        }
         catch (e) {
             console.log(e)
             res.status(400).json({ message: 'Помилка авторизації' })

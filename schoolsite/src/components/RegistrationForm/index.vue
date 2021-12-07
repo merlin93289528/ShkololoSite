@@ -12,7 +12,7 @@
           <label for="password"> Пароль:</label>
           <div>
             <input
-              type="text"
+              type="password"
               id="password"
               class="inpType"
               v-model="password"
@@ -23,12 +23,15 @@
           <label for="password"> Повторіть ваш пароль:</label>
           <div>
             <input
-              type="text"
-              id="password"
+              type="password"
+              id="password_repeat"
               class="inpType"
-              v-model="password"
+              v-model="repeat_password"
             />
           </div>
+        </div>
+        <div>
+          <p>{{ getAuthError }}</p>
         </div>
         <div class="form-group">
           <button type="button" class="btn" @click="signUpUser">
@@ -41,15 +44,35 @@
 </template>
 
 <script>
+import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "RegistrationForm",
   data() {
     return {
       name: "",
-      formClass: "",
-      mail: "",
       password: "",
+      repeat_password: "",
     };
+  },
+  computed: {
+    ...mapGetters(["getAuthError"]),
+  },
+  methods: {
+    ...mapActions(["IS_AUTH_ERRORS"]),
+    signUpUser() {
+      axios
+        .post("http://localhost:5000/auth/registration", {
+          username: this.name,
+          password: this.password,
+          repeat_password: this.repeat_password,
+        })
+        .then((response) => {
+          response.data;
+          this.$router.push('/login')
+        })
+        .catch((e) => this.IS_AUTH_ERRORS(e.response.data));
+    },
   },
 };
 </script>

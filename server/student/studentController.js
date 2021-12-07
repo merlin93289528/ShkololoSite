@@ -5,11 +5,17 @@ const Marks = require('../models/Marks')
 class studentController {
     async addNewStudent(req, res) {
         try {
-            const { studentfullname, studentform, mathmarks, ukrmarks, geografmarks } = req.body
-            const studentMarks = new Marks({ MathMarks: JSON.parse(mathmarks), UkrMarks: JSON.parse(ukrmarks), GeografMarks: JSON.parse(geografmarks) })
+            const { studentfullname, studentform } = req.body
+            if (!studentfullname) {
+                return res.status(400).json({ message: "поле 'ім'я школяра' є обов'язковим" })
+            }
+            if (!studentform) {
+                return res.status(400).json({ message: "поле 'клас' є обов'язковим" })
+            }
+            const studentMarks = new Marks()
             const student = new Student({ studentfullname, studentform, studentmarks: studentMarks })
             await student.save()
-            return res.json({ message: 'Студент був доданий' })
+            return res.json(student)
         }
         catch (e) {
             console.log(e)

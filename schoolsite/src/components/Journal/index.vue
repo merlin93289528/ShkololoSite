@@ -1,20 +1,19 @@
 <template>
   <div class="wrapper1">
-    <div class="butt_popup">
+    <div class="butt_popup" v-if="isUserAdmin">
       <button @click="showPopup" class="btnRegistAdmin">
         Зареєструвати користувача
       </button>
     </div>
     <div class="pop-window">
-    <regist-popup v-if="popupVisible" @closePop="closePopAdm" />
-
+      <regist-popup v-if="popupVisible" @closePop="closePopAdm" />
     </div>
     <div class="jrnl">
       <div class="jrnlCriteria">
         <select class="sel" v-model="selectedSubject" name="subject">
-          <option class="selOptionDis" disabled value=""
-            >Виберіть предмет</option
-          >
+          <option class="selOptionDis" disabled value="">
+            Виберіть предмет
+          </option>
           <option>Математика</option>
           <option>Українська мова</option>
           <option>Географія</option>
@@ -52,8 +51,7 @@ export default {
       selectedSubject: null,
       selectedFormClass: null,
       popupVisible: false,
-
-    }
+    };
   },
   components: {
     JournalItem,
@@ -69,7 +67,15 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["getStudentJournal"]),
+    ...mapGetters(["getStudentJournal", "getUserRole"]),
+    isUserAdmin() {
+      if(this.getUserRole == 'ADMIN'){
+       return true
+      }
+      else{
+        return false
+      }
+    },
     newStudents() {
       return this.getStudentJournal.filter(
         (el) => JSON.parse(el.studentform) == parseInt(this.selectedFormClass)

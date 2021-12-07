@@ -5,12 +5,14 @@ const store = new createStore({
     state: {
         studentJournal: [],
         authStatus: JSON.parse(localStorage.getItem("isAuth")) ?? false,
-        userRole: localStorage.getItem("Roles").split(" ") ?? null
+        userRole: JSON.parse(localStorage.getItem("Roles")) ?? "",
+        authError: ''
     },
     getters: {
         getStudentJournal: (state) => state.studentJournal,
         getAuthStatus: ({ authStatus }) => authStatus,
-        getUserRole: ({userRole}) => userRole[0]
+        getUserRole: ({userRole}) => userRole[1] || userRole[0],
+        getAuthError: ({authError}) => authError
     },
     actions: {
         GET_STUDENTS_FROM_API({ commit }) {
@@ -24,9 +26,15 @@ const store = new createStore({
         IS_AUTH({ commit }, data) {
             commit('SET_AUTH_STATUS', data)
         },
+        IS_AUTH_ERRORS({commit} , data){
+            commit('AUTH_ERRORS' , data)
+        },
         GET_NEW_MARKS({ commit }, data) {
             commit('SET_NEW_MARKS', data)
         },
+        GET_NEW_USER({commit}, data){
+            commit('SET_NEW_USER' ,data)
+        }
        
     },
     mutations: {
@@ -37,13 +45,19 @@ const store = new createStore({
             localStorage.setItem('JWTtoken', data.token)
             state.authStatus = true
             state.userRole = data.roles
-            localStorage.setItem('Roles', [data.roles , "USER"])
+            localStorage.setItem('Roles',JSON.stringify(data.roles))
             localStorage.setItem('isAuth', true)
         },
         SET_NEW_MARKS(state, data) {
             const index = state.studentJournal.findIndex(student => student._id === data._id)
             state.studentJournal[index] = data
         },
+        AUTH_ERRORS(state,data){
+            state.authError = data.message
+        },
+        SET_NEW_USER(state, data){
+            state.studentJournal.push(data)
+        }
     }
 
 

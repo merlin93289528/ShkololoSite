@@ -10,8 +10,16 @@
       <div class="form-group">
         <label for="password"> Пароль:</label>
         <div>
-          <input type="password" id="password" class="inpType" v-model="password" />
+          <input
+            type="password"
+            id="password"
+            class="inpType"
+            v-model="password"
+          />
         </div>
+      </div>
+      <div>
+        <p>{{ getAuthError }}</p>
       </div>
       <div class="form-group">
         <button type="button" @click="login" class="btn">Вхід</button>
@@ -27,20 +35,22 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 import axios from "axios";
 import router from "@/router";
 export default {
   name: "LoginForm",
   data() {
     return {
-      test: '',
       username: "",
       password: "",
     };
   },
+  computed: {
+    ...mapGetters(["getAuthError"]),
+  },
   methods: {
-    ...mapActions(["IS_AUTH"]),
+    ...mapActions(["IS_AUTH", "IS_AUTH_ERRORS"]),
     login(event) {
       event.preventDefault();
       axios
@@ -51,9 +61,9 @@ export default {
         .then((response) => {
           this.IS_AUTH(response.data);
           router.push("/");
-        });
+        })
+        .catch((e) => this.IS_AUTH_ERRORS(e.response.data));
     },
-
   },
 };
 </script>

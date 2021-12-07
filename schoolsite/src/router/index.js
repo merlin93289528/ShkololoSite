@@ -17,6 +17,7 @@ const routes = [
     },
     {
         path : '/journal',
+        meta: {auth: true},
         component: () => import('@/pages/JournalPage')
     },
     {
@@ -27,5 +28,17 @@ const routes = [
 const router = createRouter({
     routes,
     history: createWebHashHistory()
+})
+
+router.beforeEach((to, from , next) => {
+    const currentUser = JSON.parse(localStorage.getItem("isAuth"))
+    const requireAuth = to.matched.some(record => record.meta.auth)
+
+    if(requireAuth && !currentUser){
+        next('/login')
+    }
+    else{
+        next()
+    }
 })
 export default router

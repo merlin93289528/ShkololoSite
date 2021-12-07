@@ -6,6 +6,7 @@
         <div v-if="selectedsubj == 'Математика'">
           <input
             type="text"
+            :disabled="accessToInput"
             v-for="n in 20"
             :key="n"
             :value="data.studentmarks.MathMarks[n - 1]"
@@ -15,6 +16,7 @@
         <div v-else-if="selectedsubj == 'Українська мова'">
           <input
             type="text"
+            :disabled="accessToInput"
             v-for="n in 20"
             :key="n"
             :value="data.studentmarks.UkrMarks[n - 1]"
@@ -24,6 +26,7 @@
         <div v-else>
           <input
             type="text"
+            :disabled="accessToInput"
             v-for="n in 20"
             :key="n"
             :value="data.studentmarks.GeografMarks[n - 1]"
@@ -37,7 +40,7 @@
 
 <script>
 import axios from "axios";
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 export default {
   props: {
     data: {
@@ -48,7 +51,18 @@ export default {
       type: String,
     },
   },
-  computed: {},
+  computed: {
+    ...mapGetters(['getUserRole']),
+
+    accessToInput(){
+      if(this.getUserRole == 'ADMIN'){
+       return false
+      }
+      else{
+        return true
+      }
+    }
+  },
   methods: {
     ...mapActions(['GET_NEW_MARKS']),
     updateMark(mark, userId, markId, subject) {
