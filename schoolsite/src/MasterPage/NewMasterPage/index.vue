@@ -73,12 +73,14 @@ header {
 }
 .buttonExit {
   border-radius: 0.2vw 0.2vw;
+ 
   background-color: rgb(188, 253, 231);
 }
 
 .alRightWhenRegistered {
-  margin-left: 66vw;
-  display: flex;
+width: 20vw;
+margin-left: -5vw;
+display: flex;
   flex-direction: row;
 }
 .text {

@@ -25,7 +25,7 @@
         <button class="btnClose" @click="closePop">X</button>
       </div>
       <div class="btnAddDiv">
-        <button class="btnAdd" @click="addNewStudent">Додати</button>
+        <button class="btnAdd" @click="addNewStudent ">Додати</button>
       </div>
     </div>
   </div>
