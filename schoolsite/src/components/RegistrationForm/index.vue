@@ -48,6 +48,9 @@ import axios from "axios";
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "RegistrationForm",
+  created () {
+    this.$store.state.authError = '';
+  },
   data() {
     return {
       name: "",

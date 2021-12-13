@@ -40,6 +40,9 @@ import axios from "axios";
 import router from "@/router";
 export default {
   name: "LoginForm",
+  created () {
+    this.$store.state.authError = '';
+  },
   data() {
     return {
       username: "",

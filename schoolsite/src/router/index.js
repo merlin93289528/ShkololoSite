@@ -36,6 +36,7 @@ router.beforeEach((to, from , next) => {
 
     if(requireAuth && !currentUser){
         next('/login')
+        alert('Війдіть в систему для доступу до журналу')
     }
     else{
         next()
