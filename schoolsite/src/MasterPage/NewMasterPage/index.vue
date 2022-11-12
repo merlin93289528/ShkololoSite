@@ -6,10 +6,10 @@
           <router-link class="head1 nav-link" to="/">Головна сторінка</router-link>
         </div>
         <div>
-          <router-link class="head2 nav-link" to="/journal">Журнал</router-link>
+          <router-link class="head2 nav-link" id="journalClick" to="/journal">Журнал</router-link>
         </div>
         <div v-if="!getAuthStatus">
-          <router-link class="head3 nav-link" to="/login">Вхід</router-link>
+          <router-link class="head3 nav-link" id="loginButton" to="/login">Вхід</router-link>
         </div>
         <div class="alRightWhenRegistered" v-else>
           <div class="text">

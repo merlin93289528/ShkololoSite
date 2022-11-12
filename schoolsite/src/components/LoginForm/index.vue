@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="wrapper">
+      <div id="aboba">amogus</div>
       <div class="form-group">
         <label for="email"> Логін:</label>
         <div class="">
@@ -10,12 +11,7 @@
       <div class="form-group">
         <label for="password"> Пароль:</label>
         <div>
-          <input
-            type="password"
-            id="password"
-            class="inpType"
-            v-model="password"
-          />
+          <input type="password" id="password" class="inpType" v-model="password" />
         </div>
       </div>
       <div class="errorLog">
@@ -26,9 +22,7 @@
       </div>
       <div class="form-group">
         Нема аккаунту?
-        <router-link class="refRegist" to="/registration"
-          >Зареєструвати</router-link
-        >
+        <router-link class="refRegist" to="/registration">Зареєструвати</router-link>
       </div>
     </div>
   </div>
@@ -40,7 +34,7 @@ import axios from "axios";
 import router from "@/router";
 export default {
   name: "LoginForm",
-  created () {
+  created() {
     this.$store.state.authError = '';
   },
   data() {
@@ -72,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-.errorLog{
+.errorLog {
   position: absolute;
   margin-top: 13vw;
   margin-left: 2vw;

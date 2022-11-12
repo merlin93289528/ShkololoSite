@@ -14,14 +14,14 @@
           <option class="selOptionDis" disabled value="">
             Виберіть предмет
           </option>
-          <option>Математика</option>
+          <option id="math">Математика</option>
           <option>Українська мова</option>
           <option>Географія</option>
         </select>
         <select class="sel" v-model="selectedFormClass" name="form-class">
           <option class="selOptionDis" disabled value="">Виберіть клас</option>
           <option>1 клас</option>
-          <option>2 клас</option>
+          <option id="2grade">2 клас</option>
           <option>3 клас</option>
           <option>4 клас</option>
         </select>
@@ -29,6 +29,7 @@
 
       <div class="jrnlStudentName">
         <journal-item
+          class="item"
           v-for="student in newStudents"
           :data="student"
           :key="student.id"
@@ -82,6 +83,10 @@ export default {
       );
     },
   },
+  // mounted(){
+  //   this.selectedSubject = 'Математика'
+  //   this.selectedFormClass = '2 клас'
+  // },
   created() {
     this.GET_STUDENTS_FROM_API();
   },

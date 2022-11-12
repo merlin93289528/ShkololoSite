@@ -4,34 +4,19 @@
       <p class="studName">{{ data.studentfullname }}</p>
       <div class="inputTypeMark">
         <div v-if="selectedsubj == 'Математика'">
-          <input
-            type="text"
-            :disabled="accessToInput"
-            v-for="n in 20"
-            :key="n"
+          <input type="text" :disabled="accessToInput" v-for="n in 20" :id="`${data.studentfullname}-${n}`" :key="n"
             :value="data.studentmarks.MathMarks[n - 1]"
-            @change="updateMark($event.target.value, data._id, n, selectedsubj)"
-          />
+            @change="updateMark($event.target.value, data._id, n, selectedsubj)" />
         </div>
         <div v-else-if="selectedsubj == 'Українська мова'">
-          <input
-            type="text"
-            :disabled="accessToInput"
-            v-for="n in 20"
-            :key="n"
+          <input type="text" :disabled="accessToInput" v-for="n in 20" :key="n"
             :value="data.studentmarks.UkrMarks[n - 1]"
-            @change="updateMark($event.target.value, data._id, n, selectedsubj)"
-          />
+            @change="updateMark($event.target.value, data._id, n, selectedsubj)" />
         </div>
         <div v-else>
-          <input
-            type="text"
-            :disabled="accessToInput"
-            v-for="n in 20"
-            :key="n"
+          <input type="text" :disabled="accessToInput" v-for="n in 20" :key="n"
             :value="data.studentmarks.GeografMarks[n - 1]"
-            @change="updateMark($event.target.value, data._id, n, selectedsubj)"
-          />
+            @change="updateMark($event.target.value, data._id, n, selectedsubj)" />
         </div>
       </div>
     </div>
@@ -40,7 +25,7 @@
 
 <script>
 import axios from "axios";
-import {mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   props: {
     data: {
@@ -54,11 +39,11 @@ export default {
   computed: {
     ...mapGetters(['getUserRole']),
 
-    accessToInput(){
-      if(this.getUserRole == 'ADMIN'){
-       return false
+    accessToInput() {
+      if (this.getUserRole == 'ADMIN') {
+        return false
       }
-      else{
+      else {
         return true
       }
     }
@@ -86,20 +71,23 @@ export default {
   height: 1.3vw;
   font-size: 1vw;
   text-align: center;
-   color: rgb(24, 10, 10);
+  color: rgb(24, 10, 10);
 
   background-color: rgba(255, 228, 196, 0.651);
 
 }
+
 .inputTypeMark {
   margin-left: 1vw;
 }
+
 .JrnItem {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: -1.5vw;
 }
+
 input {
   width: 1.5vw;
   height: 1.3vw;

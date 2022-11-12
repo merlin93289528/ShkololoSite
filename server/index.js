@@ -12,7 +12,7 @@ app.use('/student', studentRouter)
 
 const start = async () => {
     try {
-        await mongoose.connect(`mongodb+srv://root:1234@cluster0.woe2n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+        await mongoose.connect(`mongodb+srv://root:1234@cluster0.woe2n.mongodb.net/?retryWrites=true&w=majority`)
         app.listen(PORT, () => console.log(`server run in ${PORT}`))
     }
     catch (e) {
